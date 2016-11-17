@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="one-col card">
+    <article class="page">
+        <h1 class="page-heading">{{ page.title }}</h1>
+
+        <div class="article-content" itemprop="articleBody">
+            {{ content }}
+        </div>
+        {% if page.share == null or page.share == true %}
+            <section>{% include share-duoshuo.html %}</section>
+        {% endif %}
+        {% if page.share == null or page.comment == true %}
+            <section>{% include comment-duoshuo.html %}</section>
+        {% endif %}
+    </article>
+</div>
